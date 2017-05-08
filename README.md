@@ -1,17 +1,17 @@
-#BoneRichText 富文本编辑器
+# BoneRichText 富文本编辑器
 ## 简介
 
 * BoneRichText是用纯 Swift 写成的富文本编辑器，供大家互相学习
 * BoneRichText主要分为两个部分：BoneRichTools和BoneRichTextView
 
-##环境要求
+## 环境要求
 
 * iOS 7.0+
 * Xcode 8 (Swift 3) 版
 
-##BoneRichTextView
+## BoneRichTextView
 
-####textStyle: 字体样式
+#### textStyle: 字体样式
 
 > textStyle.fontSize: 字号
 
@@ -19,7 +19,7 @@
 
 > textStyle.fontColor: 字体颜色
 
-##BoneRichTools
+## BoneRichTools
 
 获取字体样式
 > textStyle
