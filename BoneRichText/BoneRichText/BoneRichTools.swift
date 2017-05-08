@@ -50,7 +50,7 @@ class BoneRichTools: UIView {
     }
     
     public var delegate: BoneRichToolsDelegate?
-    private var itemNum = 3
+
     private var hiddenBtn: UIButton!  // 隐藏键盘
     
     convenience init() {
