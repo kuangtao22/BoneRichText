@@ -1,4 +1,8 @@
 # BoneRichText 富文本编辑器
+
+![github](https://github.com/kuangtao22/BoneRichText-/blob/master/%E9%A2%84%E8%A7%88.gif
+ "github")  
+ 
 ## 简介
 
 * BoneRichText是用纯 Swift 写成的富文本编辑器，供大家互相学习
