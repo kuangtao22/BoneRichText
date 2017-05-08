@@ -5,10 +5,12 @@
 * BoneRichText主要分为两个部分：BoneRichTools和BoneRichTextView
 
 ##环境要求
+
 * iOS 7.0+
 * Xcode 8 (Swift 3) 版
 
 ##BoneRichTextView
+
 ####textStyle: 字体样式
 
 > textStyle.fontSize: 字号
@@ -18,10 +20,11 @@
 > textStyle.fontColor: 字体颜色
 
 ##BoneRichTools
+
 获取字体样式
 > textStyle
 
-代理方法
+###代理方法
 
 * 操作richTools改变前
 	
