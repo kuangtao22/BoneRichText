@@ -51,8 +51,8 @@ class ViewController: UIViewController {
         } else {
             
         }
+        print(richText.htmlString)
     }
-
 }
 
 extension ViewController: UIAlertViewDelegate {

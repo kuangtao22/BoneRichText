@@ -14,13 +14,13 @@ extension NSAttributedString {
     ///
     /// - Returns: Html String
     func html() -> String {
-        let exportParams = [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType,
-                            NSCharacterEncodingDocumentAttribute:String.Encoding.utf8.rawValue] as [String : Any]
+        let exportParams = [.documentType: NSAttributedString.DocumentType.html,
+        .characterEncoding: String.Encoding.utf8.rawValue] as [NSAttributedString.DocumentAttributeKey : Any]
         
         do {
             let htmlData = try self.data(from: NSMakeRange(0, self.length), documentAttributes: exportParams)
             let htmlString = NSString.init(data: htmlData, encoding: String.Encoding.utf8.rawValue)
-            return htmlString as! String
+            return htmlString! as String
         } catch let error as NSError {
             print(error.localizedDescription)
             return ""
@@ -37,7 +37,7 @@ extension String {
     /// - Returns: 富文本格式
     func attributedString() -> NSAttributedString? {
         do {
-            let attrStr = try NSAttributedString(data: self.data(using: String.Encoding.unicode, allowLossyConversion: true)!, options: [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType], documentAttributes: nil)
+            let attrStr = try NSAttributedString(data: self.data(using: String.Encoding.unicode, allowLossyConversion: true)!, options: [.documentType: NSAttributedString.DocumentType.html,.characterEncoding: String.Encoding.utf8.rawValue], documentAttributes: nil)
             return attrStr
             
         } catch let error as NSError {

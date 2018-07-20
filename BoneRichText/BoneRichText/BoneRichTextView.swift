@@ -20,14 +20,13 @@ extension BoneRichTextView {
         case .bold:
             let font = self.textStyle.isBold ? UIFont.boldSystemFont(ofSize: self.textStyle.fontSize)
                 : UIFont.systemFont(ofSize: self.textStyle.fontSize)
-            attributeStr.addAttribute(NSFontAttributeName, value: font , range: range)
+            attributeStr.addAttribute(kCTFontAttributeName as NSAttributedStringKey, value: font , range: range)
         case .color:
-            attributeStr.addAttribute(NSForegroundColorAttributeName, value: self.textStyle.fontColor , range: range)
-            
+            attributeStr.addAttribute(NSAttributedStringKey.foregroundColor, value: self.textStyle.fontColor , range: range)
         case .font:
             let font = self.textStyle.isBold ? UIFont.boldSystemFont(ofSize: self.textStyle.fontSize)
                 : UIFont.systemFont(ofSize: self.textStyle.fontSize)
-            attributeStr.addAttribute(NSFontAttributeName, value: font , range: range)
+            attributeStr.addAttribute(kCTFontAttributeName as NSAttributedStringKey, value: font , range: range)
         case .image: break
             
         }
@@ -106,8 +105,15 @@ extension BoneRichTextView: UITextViewDelegate {
         let font = self.textStyle.isBold ? UIFont.boldSystemFont(ofSize: self.textStyle.fontSize)
             : UIFont.systemFont(ofSize: self.textStyle.fontSize)
         
-        self.typingAttributes[NSFontAttributeName] = font
-        self.typingAttributes[NSForegroundColorAttributeName] = self.textStyle.fontColor
+//        self.typingAttributes[kCTFontAttributeName as String] = font
+//        self.typingAttributes["NSAttributedStringKey.foregroundColor" as String] = self.textStyle.fontColor.cgColor
+        
+        let attributes = [
+            NSAttributedStringKey.font.rawValue: font,
+            NSAttributedStringKey.foregroundColor.rawValue: self.textStyle.fontColor
+            ] as [String : Any]
+        
+        self.typingAttributes = attributes
     }
     
     // 当用户选择text view中的部分内容
