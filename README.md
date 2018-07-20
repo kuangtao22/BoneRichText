@@ -11,7 +11,7 @@
 ## 环境要求
 
 * iOS 7.0+
-* Xcode 8 (Swift 3) 版
+* Xcode 8 (Swift 4.1) 版
 
 ## BoneRichTextView
 
