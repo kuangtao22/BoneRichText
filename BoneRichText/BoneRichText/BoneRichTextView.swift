@@ -38,7 +38,19 @@ extension BoneRichTextView {
 
 class BoneRichTextView: UITextView {
 
-    var textStyle: BoneRichTextStyle!   // 字体样式
+    var textStyle: BoneRichTextStyle!{
+        didSet {
+            let font = self.textStyle.isBold ? UIFont.boldSystemFont(ofSize: self.textStyle.fontSize)
+                : UIFont.systemFont(ofSize: self.textStyle.fontSize)
+            
+            let attributes = [
+                NSAttributedStringKey.font.rawValue: font,
+                NSAttributedStringKey.foregroundColor.rawValue: self.textStyle.fontColor
+                ] as [String : Any]
+            
+            self.typingAttributes = attributes
+        }
+    }
     
     var htmlString: String {
         get {
@@ -80,18 +92,13 @@ class BoneRichTextView: UITextView {
     fileprivate var lastRange: NSRange!
     override init(frame: CGRect, textContainer: NSTextContainer?) {
         super.init(frame: frame, textContainer: textContainer)
-        
         self.delegate = self
         self.lastRange = self.selectedRange
-
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
-    
-    
 }
 
 extension BoneRichTextView: UITextViewDelegate {
@@ -104,10 +111,7 @@ extension BoneRichTextView: UITextViewDelegate {
     func textViewDidChange(_ textView: UITextView) {
         let font = self.textStyle.isBold ? UIFont.boldSystemFont(ofSize: self.textStyle.fontSize)
             : UIFont.systemFont(ofSize: self.textStyle.fontSize)
-        
-//        self.typingAttributes[kCTFontAttributeName as String] = font
-//        self.typingAttributes["NSAttributedStringKey.foregroundColor" as String] = self.textStyle.fontColor.cgColor
-        
+
         let attributes = [
             NSAttributedStringKey.font.rawValue: font,
             NSAttributedStringKey.foregroundColor.rawValue: self.textStyle.fontColor
@@ -121,10 +125,7 @@ extension BoneRichTextView: UITextViewDelegate {
         self.lastRange = self.selectedRange
     }
     
-    
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-        
-       
         return true
     }
 }
