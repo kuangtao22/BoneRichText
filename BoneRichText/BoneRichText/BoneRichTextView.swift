@@ -88,6 +88,27 @@ class BoneRichTextView: UITextView {
             }
         }
     }
+    
+    // 待用：图片 html 重组方法
+    func change(_ str: String) -> String? {
+        let marr = str.components(separatedBy: "\"")
+        
+        let newArr = marr.flatMap { htmlString -> [String] in
+            var newArr = Array<Any>()
+            let aBool = !htmlString.hasPrefix("file:///Attachment")
+            if aBool {
+                newArr.append(htmlString)
+            } else {
+                // 这里将上传成功的图片 URL 插入
+                newArr.append("http://og1yl0w9z.bkt.clouddn.com/18-7-25/6373094.jpg")
+            }
+            return newArr as! [String]
+        }
+        
+        let newStr = newArr.joined(separator: "\"")
+        
+        return newStr
+    }
 
     fileprivate var lastRange: NSRange!
     override init(frame: CGRect, textContainer: NSTextContainer?) {
