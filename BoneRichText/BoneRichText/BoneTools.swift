@@ -90,10 +90,10 @@ struct BoneTools {
     public func checkColor(code: String, alpha: CGFloat = 1) -> UIColor {
         var cString: String = code.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines)
         
-        if cString.characters.count < 6 {return UIColor.black}
+        if cString.count < 6 {return UIColor.black}
         if cString.hasPrefix("0X") {cString = cString.substring(from: cString.index(cString.startIndex, offsetBy: 2))}
         if cString.hasPrefix("#") {cString = cString.substring(from: cString.index(cString.startIndex, offsetBy: 1))}
-        if cString.characters.count != 6 {return UIColor.black}
+        if cString.count != 6 {return UIColor.black}
         var range: NSRange = NSMakeRange(0, 2)
         let rString = (cString as NSString).substring(with: range)
         range.location = 2
@@ -120,8 +120,8 @@ struct BoneTools {
     /// - Returns: 返回高度
     public func getTextHeigh(text: String, font: UIFont, width: CGFloat) -> CGFloat {
         let size = CGSize(width: width, height: 1000)
-        let dic = NSDictionary(object: font, forKey: NSFontAttributeName as NSCopying)
-        let stringSize = text.boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: dic as? [String : AnyObject], context:nil).size
+        let dic = NSDictionary(object: font, forKey: kCTFontAttributeName as! NSCopying)
+        let stringSize = text.boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: dic as? [NSAttributedStringKey : AnyObject], context:nil).size
         return stringSize.height
     }
     
@@ -135,8 +135,8 @@ struct BoneTools {
     /// - Returns: 返回高度
     public func getTextWidth(text: String,font: UIFont, height: CGFloat) -> CGFloat {
         let size = CGSize(width: 1000, height: height)
-        let dic = NSDictionary(object: font, forKey: NSFontAttributeName as NSCopying)
-        let stringSize = text.boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: dic as? [String : AnyObject], context:nil).size
+        let dic = NSDictionary(object: font, forKey: kCTFontAttributeName as! NSCopying)
+        let stringSize = text.boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: dic as? [NSAttributedStringKey : AnyObject], context:nil).size
         return stringSize.width
     }
     

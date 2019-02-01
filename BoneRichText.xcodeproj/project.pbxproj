@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52DCE57F21080D0D001D5EAC /* richTextEditor.html in Resources */ = {isa = PBXBuildFile; fileRef = 52DCE57D21080D0D001D5EAC /* richTextEditor.html */; };
+		52DCE58021080D0D001D5EAC /* EditListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DCE57E21080D0D001D5EAC /* EditListViewController.swift */; };
+		52DCE58221080D2C001D5EAC /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DCE58121080D2C001D5EAC /* EditViewController.swift */; };
 		7E031A531EC0545600D58EA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E031A521EC0545600D58EA5 /* AppDelegate.swift */; };
 		7E031A551EC0545600D58EA5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E031A541EC0545600D58EA5 /* ViewController.swift */; };
 		7E031A581EC0545600D58EA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E031A561EC0545600D58EA5 /* Main.storyboard */; };
 		7E031A5A1EC0545600D58EA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E031A591EC0545600D58EA5 /* Assets.xcassets */; };
 		7E031A5D1EC0545600D58EA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E031A5B1EC0545600D58EA5 /* LaunchScreen.storyboard */; };
-		7E031A681EC0545600D58EA5 /* BoneRichTextTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E031A671EC0545600D58EA5 /* BoneRichTextTests.swift */; };
-		7E031A731EC0545600D58EA5 /* BoneRichTextUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E031A721EC0545600D58EA5 /* BoneRichTextUITests.swift */; };
 		7E031A8B1EC054B200D58EA5 /* BoneBasicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E031A811EC054B200D58EA5 /* BoneBasicView.swift */; };
 		7E031A8C1EC054B200D58EA5 /* BoneCloseBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E031A821EC054B200D58EA5 /* BoneCloseBtn.swift */; };
 		7E031A8D1EC054B200D58EA5 /* BoneColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E031A831EC054B200D58EA5 /* BoneColorView.swift */; };
@@ -30,24 +31,10 @@
 		7E031A9C1EC05B9400D58EA5 /* BoneTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E031A9B1EC05B9400D58EA5 /* BoneTools.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		7E031A641EC0545600D58EA5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7E031A471EC0545600D58EA5 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7E031A4E1EC0545600D58EA5;
-			remoteInfo = BoneRichText;
-		};
-		7E031A6F1EC0545600D58EA5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7E031A471EC0545600D58EA5 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7E031A4E1EC0545600D58EA5;
-			remoteInfo = BoneRichText;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
+		52DCE57D21080D0D001D5EAC /* richTextEditor.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = richTextEditor.html; sourceTree = "<group>"; };
+		52DCE57E21080D0D001D5EAC /* EditListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditListViewController.swift; sourceTree = "<group>"; };
+		52DCE58121080D2C001D5EAC /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		7E031A4F1EC0545600D58EA5 /* BoneRichText.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoneRichText.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E031A521EC0545600D58EA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E031A541EC0545600D58EA5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,10 +42,8 @@
 		7E031A591EC0545600D58EA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E031A5C1EC0545600D58EA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E031A5E1EC0545600D58EA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7E031A631EC0545600D58EA5 /* BoneRichTextTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BoneRichTextTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E031A671EC0545600D58EA5 /* BoneRichTextTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoneRichTextTests.swift; sourceTree = "<group>"; };
 		7E031A691EC0545600D58EA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7E031A6E1EC0545600D58EA5 /* BoneRichTextUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BoneRichTextUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E031A721EC0545600D58EA5 /* BoneRichTextUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoneRichTextUITests.swift; sourceTree = "<group>"; };
 		7E031A741EC0545600D58EA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E031A811EC054B200D58EA5 /* BoneBasicView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoneBasicView.swift; sourceTree = "<group>"; };
@@ -85,23 +70,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7E031A601EC0545600D58EA5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7E031A6B1EC0545600D58EA5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52DCE57C21080CFA001D5EAC /* WebRichText */ = {
+			isa = PBXGroup;
+			children = (
+				52DCE58121080D2C001D5EAC /* EditViewController.swift */,
+				52DCE57E21080D0D001D5EAC /* EditListViewController.swift */,
+				52DCE57D21080D0D001D5EAC /* richTextEditor.html */,
+			);
+			path = WebRichText;
+			sourceTree = "<group>";
+		};
 		7E031A461EC0545600D58EA5 = {
 			isa = PBXGroup;
 			children = (
@@ -116,8 +97,6 @@
 			isa = PBXGroup;
 			children = (
 				7E031A4F1EC0545600D58EA5 /* BoneRichText.app */,
-				7E031A631EC0545600D58EA5 /* BoneRichTextTests.xctest */,
-				7E031A6E1EC0545600D58EA5 /* BoneRichTextUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -127,6 +106,7 @@
 			children = (
 				7E031A521EC0545600D58EA5 /* AppDelegate.swift */,
 				7E031A541EC0545600D58EA5 /* ViewController.swift */,
+				52DCE57C21080CFA001D5EAC /* WebRichText */,
 				7E031A801EC054B200D58EA5 /* BoneRichText */,
 				7E031A561EC0545600D58EA5 /* Main.storyboard */,
 				7E031A591EC0545600D58EA5 /* Assets.xcassets */,
@@ -195,42 +175,6 @@
 			productReference = 7E031A4F1EC0545600D58EA5 /* BoneRichText.app */;
 			productType = "com.apple.product-type.application";
 		};
-		7E031A621EC0545600D58EA5 /* BoneRichTextTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7E031A7A1EC0545600D58EA5 /* Build configuration list for PBXNativeTarget "BoneRichTextTests" */;
-			buildPhases = (
-				7E031A5F1EC0545600D58EA5 /* Sources */,
-				7E031A601EC0545600D58EA5 /* Frameworks */,
-				7E031A611EC0545600D58EA5 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				7E031A651EC0545600D58EA5 /* PBXTargetDependency */,
-			);
-			name = BoneRichTextTests;
-			productName = BoneRichTextTests;
-			productReference = 7E031A631EC0545600D58EA5 /* BoneRichTextTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		7E031A6D1EC0545600D58EA5 /* BoneRichTextUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7E031A7D1EC0545600D58EA5 /* Build configuration list for PBXNativeTarget "BoneRichTextUITests" */;
-			buildPhases = (
-				7E031A6A1EC0545600D58EA5 /* Sources */,
-				7E031A6B1EC0545600D58EA5 /* Frameworks */,
-				7E031A6C1EC0545600D58EA5 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				7E031A701EC0545600D58EA5 /* PBXTargetDependency */,
-			);
-			name = BoneRichTextUITests;
-			productName = BoneRichTextUITests;
-			productReference = 7E031A6E1EC0545600D58EA5 /* BoneRichTextUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -243,19 +187,8 @@
 				TargetAttributes = {
 					7E031A4E1EC0545600D58EA5 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = MQ4BAK6QRP;
 						ProvisioningStyle = Automatic;
-					};
-					7E031A621EC0545600D58EA5 = {
-						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = TQ57V7K726;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 7E031A4E1EC0545600D58EA5;
-					};
-					7E031A6D1EC0545600D58EA5 = {
-						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = TQ57V7K726;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 7E031A4E1EC0545600D58EA5;
 					};
 				};
 			};
@@ -273,8 +206,6 @@
 			projectRoot = "";
 			targets = (
 				7E031A4E1EC0545600D58EA5 /* BoneRichText */,
-				7E031A621EC0545600D58EA5 /* BoneRichTextTests */,
-				7E031A6D1EC0545600D58EA5 /* BoneRichTextUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -288,20 +219,7 @@
 				7E031A5D1EC0545600D58EA5 /* LaunchScreen.storyboard in Resources */,
 				7E031A5A1EC0545600D58EA5 /* Assets.xcassets in Resources */,
 				7E031A581EC0545600D58EA5 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7E031A611EC0545600D58EA5 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7E031A6C1EC0545600D58EA5 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				52DCE57F21080D0D001D5EAC /* richTextEditor.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,7 +237,9 @@
 				7E031A8B1EC054B200D58EA5 /* BoneBasicView.swift in Sources */,
 				7E031A961EC0558700D58EA5 /* UIView+Geometry.swift in Sources */,
 				7E031A921EC054B200D58EA5 /* BoneRichModel.swift in Sources */,
+				52DCE58221080D2C001D5EAC /* EditViewController.swift in Sources */,
 				7E031A981EC05A0200D58EA5 /* NSAttributedString+Extension.swift in Sources */,
+				52DCE58021080D0D001D5EAC /* EditListViewController.swift in Sources */,
 				7E031A9A1EC05ABA00D58EA5 /* UIColor+Extension.swift in Sources */,
 				7E031A8E1EC054B200D58EA5 /* BoneFontView.swift in Sources */,
 				7E031A551EC0545600D58EA5 /* ViewController.swift in Sources */,
@@ -330,36 +250,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7E031A5F1EC0545600D58EA5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7E031A681EC0545600D58EA5 /* BoneRichTextTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7E031A6A1EC0545600D58EA5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7E031A731EC0545600D58EA5 /* BoneRichTextUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		7E031A651EC0545600D58EA5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 7E031A4E1EC0545600D58EA5 /* BoneRichText */;
-			targetProxy = 7E031A641EC0545600D58EA5 /* PBXContainerItemProxy */;
-		};
-		7E031A701EC0545600D58EA5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 7E031A4E1EC0545600D58EA5 /* BoneRichText */;
-			targetProxy = 7E031A6F1EC0545600D58EA5 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		7E031A561EC0545600D58EA5 /* Main.storyboard */ = {
@@ -476,13 +367,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = MQ4BAK6QRP;
 				INFOPLIST_FILE = BoneRichText/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yuxutao.BoneRichText;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -490,71 +381,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = MQ4BAK6QRP;
 				INFOPLIST_FILE = BoneRichText/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yuxutao.BoneRichText;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
-		7E031A7B1EC0545600D58EA5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = TQ57V7K726;
-				INFOPLIST_FILE = BoneRichTextTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = yuxutao.BoneRichTextTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BoneRichText.app/BoneRichText";
-			};
-			name = Debug;
-		};
-		7E031A7C1EC0545600D58EA5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = TQ57V7K726;
-				INFOPLIST_FILE = BoneRichTextTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = yuxutao.BoneRichTextTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BoneRichText.app/BoneRichText";
-			};
-			name = Release;
-		};
-		7E031A7E1EC0545600D58EA5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = TQ57V7K726;
-				INFOPLIST_FILE = BoneRichTextUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = yuxutao.BoneRichTextUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = BoneRichText;
-			};
-			name = Debug;
-		};
-		7E031A7F1EC0545600D58EA5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = TQ57V7K726;
-				INFOPLIST_FILE = BoneRichTextUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = yuxutao.BoneRichTextUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = BoneRichText;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -577,22 +410,7 @@
 				7E031A791EC0545600D58EA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		7E031A7A1EC0545600D58EA5 /* Build configuration list for PBXNativeTarget "BoneRichTextTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7E031A7B1EC0545600D58EA5 /* Debug */,
-				7E031A7C1EC0545600D58EA5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		7E031A7D1EC0545600D58EA5 /* Build configuration list for PBXNativeTarget "BoneRichTextUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7E031A7E1EC0545600D58EA5 /* Debug */,
-				7E031A7F1EC0545600D58EA5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

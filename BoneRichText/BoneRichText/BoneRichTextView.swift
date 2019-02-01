@@ -20,14 +20,13 @@ extension BoneRichTextView {
         case .bold:
             let font = self.textStyle.isBold ? UIFont.boldSystemFont(ofSize: self.textStyle.fontSize)
                 : UIFont.systemFont(ofSize: self.textStyle.fontSize)
-            attributeStr.addAttribute(NSFontAttributeName, value: font , range: range)
+            attributeStr.addAttribute(kCTFontAttributeName as NSAttributedStringKey, value: font , range: range)
         case .color:
-            attributeStr.addAttribute(NSForegroundColorAttributeName, value: self.textStyle.fontColor , range: range)
-            
+            attributeStr.addAttribute(NSAttributedStringKey.foregroundColor, value: self.textStyle.fontColor , range: range)
         case .font:
             let font = self.textStyle.isBold ? UIFont.boldSystemFont(ofSize: self.textStyle.fontSize)
                 : UIFont.systemFont(ofSize: self.textStyle.fontSize)
-            attributeStr.addAttribute(NSFontAttributeName, value: font , range: range)
+            attributeStr.addAttribute(kCTFontAttributeName as NSAttributedStringKey, value: font , range: range)
         case .image: break
             
         }
@@ -39,7 +38,19 @@ extension BoneRichTextView {
 
 class BoneRichTextView: UITextView {
 
-    var textStyle: BoneRichTextStyle!   // 字体样式
+    var textStyle: BoneRichTextStyle!{
+        didSet {
+            let font = self.textStyle.isBold ? UIFont.boldSystemFont(ofSize: self.textStyle.fontSize)
+                : UIFont.systemFont(ofSize: self.textStyle.fontSize)
+            
+            let attributes = [
+                NSAttributedStringKey.font.rawValue: font,
+                NSAttributedStringKey.foregroundColor.rawValue: self.textStyle.fontColor
+                ] as [String : Any]
+            
+            self.typingAttributes = attributes
+        }
+    }
     
     var htmlString: String {
         get {
@@ -77,22 +88,38 @@ class BoneRichTextView: UITextView {
             }
         }
     }
+    
+    // 待用：图片 html 重组方法
+    func change(_ str: String) -> String? {
+        let marr = str.components(separatedBy: "\"")
+        
+        let newArr = marr.flatMap { htmlString -> [String] in
+            var newArr = Array<Any>()
+            let aBool = !htmlString.hasPrefix("file:///Attachment")
+            if aBool {
+                newArr.append(htmlString)
+            } else {
+                // 这里将上传成功的图片 URL 插入
+                newArr.append("http://og1yl0w9z.bkt.clouddn.com/18-7-25/6373094.jpg")
+            }
+            return newArr as! [String]
+        }
+        
+        let newStr = newArr.joined(separator: "\"")
+        
+        return newStr
+    }
 
     fileprivate var lastRange: NSRange!
     override init(frame: CGRect, textContainer: NSTextContainer?) {
         super.init(frame: frame, textContainer: textContainer)
-        
         self.delegate = self
         self.lastRange = self.selectedRange
-
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
-    
-    
 }
 
 extension BoneRichTextView: UITextViewDelegate {
@@ -105,9 +132,13 @@ extension BoneRichTextView: UITextViewDelegate {
     func textViewDidChange(_ textView: UITextView) {
         let font = self.textStyle.isBold ? UIFont.boldSystemFont(ofSize: self.textStyle.fontSize)
             : UIFont.systemFont(ofSize: self.textStyle.fontSize)
+
+        let attributes = [
+            NSAttributedStringKey.font.rawValue: font,
+            NSAttributedStringKey.foregroundColor.rawValue: self.textStyle.fontColor
+            ] as [String : Any]
         
-        self.typingAttributes[NSFontAttributeName] = font
-        self.typingAttributes[NSForegroundColorAttributeName] = self.textStyle.fontColor
+        self.typingAttributes = attributes
     }
     
     // 当用户选择text view中的部分内容
@@ -115,10 +146,7 @@ extension BoneRichTextView: UITextViewDelegate {
         self.lastRange = self.selectedRange
     }
     
-    
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-        
-       
         return true
     }
 }
