@@ -51,7 +51,11 @@ extension EditListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let view = EditViewController()
-        let str = "哈哈哈啊啊啊啊 <img src=\"http://pic.baikemy.net/apps/kanghubang/486/3486/iOS1475026895.jpg\"><div>哈哈哈啊啊啊啊奥等级看哈接口b</div>"
+        
+//        let str = "哈哈哈啊啊啊啊 <img src=\"http://pic.baikemy.net/apps/kanghubang/486/3486/iOS1475026895.jpg\"><div>哈哈哈啊啊啊啊奥等级看哈接口b</div>"
+        
+        let str = "说得就像是真的一样差点信了你的鬼话<img src=\"https://bbtcdn.8btc.com/static/image/smiley/coolmonkey/09.gif\" smilieid=\"33\" border=\"0\" alt=\"\" />"
+        
         view.inHtmlString = indexPath.row == 0 ? "" : str
         navigationController?.pushViewController(view, animated: true)
     }
